@@ -1,0 +1,70 @@
+.Menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+    &__title {
+        font-size: 24px;
+        font-weight: 800;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+
+        &__item {
+            font-size: 18px;
+            font-weight: 600;
+            margin-left: 60px;
+            color: $light;
+
+            &--selected {
+                color: $white;
+            }
+        }
+
+        .Button {
+            margin-left: 60px;
+        }
+    }
+
+    &--light {
+        .Menu__nav {
+            &__item {
+                color: $grey;
+    
+                &--selected {
+                    color: $primary;
+                }
+            }
+
+            &__item.Button {
+                color: $primary;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .Menu {
+        &__nav {
+            &__item {
+                display: none;
+            }
+
+            .Button {
+                margin: 0;
+            }
+        }
+    }
+}

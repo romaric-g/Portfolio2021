@@ -1,0 +1,70 @@
+.Home {
+    background-color: $primary;
+    height: 100vh;
+
+    .container {
+        color: $light;
+        height: 100vh;
+        max-height: 1200px;
+        display: flex;
+        flex-direction: column;
+
+
+        .Menu {
+            flex: 0;
+        }
+    
+        .Slider {
+            flex: 1;
+        }
+    
+        .Home__footer {
+            flex: 0;
+            margin-bottom: 30px;
+    
+            &__sliderinfo {
+                padding: 0;
+                display: flex;
+                list-style: none;
+                color: $light;
+    
+                &__item {
+                    position: relative;
+                    margin-right: 20px;
+                    min-width: 90px;
+    
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: -12px;
+                        height: 1px;
+                        width: 100%;
+                        transition-delay: all 0.2s;
+                        background-color: $light;
+                    }
+    
+                    &--selected {
+    
+                        &::before {
+                            height: 3px;
+                            background-color: $white;
+                            color: $white;
+                        }
+                    }
+    
+                    &__year {
+                        font-weight: 600;
+                        font-size: 18px;
+                        margin: 0;
+                    }
+    
+                    &__month {
+                        margin: 0;
+                        font-weight: 400;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

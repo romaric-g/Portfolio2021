@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="Project Background--light">
+    <div class="container">
+        {% include menu.html color="light" %}
+
+        <div class="row justify-content-center">
+            <section class="Project__header col-md-8">
+                <div class="Project__header__title">{{ page.title }}</div>
+                <div class="Project__header__period">{{ page.period }}</div>
+
+                <ul class="Project__header__tags">
+                    <li class="Project__header__tags__tag">Mobile</li>
+                    <li class="Project__header__tags__tag">Serveur</li>
+                    <li class="Project__header__tags__tag">UI</li>
+                </ul>
+
+                <p class="Project__description">
+                    {{ page.description }}
+                </p>
+            </section>
+            <div class="col-md-12">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+    {% include footer.html %}
+</div>

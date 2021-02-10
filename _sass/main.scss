@@ -1,0 +1,84 @@
+@import "bootstrap-5.0.0-beta1/scss/bootstrap-grid";
+
+@import "variables";
+
+/* Pages */
+
+@import "home";
+@import "about";
+@import "projects";
+@import "project";
+
+
+/* Includes */
+
+@import "menu";
+@import "footer";
+@import "project-preview";
+@import "app-design-section";
+
+
+/* Components */
+
+@import "button";
+@import "slider";
+
+
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.Title {
+    &--n1 {
+        font-weight: 600;
+        font-size: 48px;
+        margin: 0 0 30px 0;
+    }
+
+    &--n2 {
+        font-weight: 500;
+        font-size: 28px;
+        margin: 15px 0; 
+    }
+
+    &--n3 {
+        font-weight: 400;
+        font-size: 18px;
+        margin: 0;
+    }
+}
+
+section {
+    padding: 0 0 70px 0;
+    
+    p {
+        font-size: 24px;
+    }
+}
+
+.color-inner {
+    padding: 60px 0;
+}
+
+.Background {
+
+    &--light {
+        color: $primary;
+        background-color: $backgroundlight;
+    }
+
+    &--dark {
+        background-color: $primary;
+        color: $light;
+
+        .Title {
+            color: $white;
+        }
+    }
+}
+
+a {
+    color: inherit;
+}

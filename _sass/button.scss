@@ -1,0 +1,30 @@
+.Button {
+
+    &--rounded {
+        background-color: $red;
+        color: $primary;
+        padding: 10px 30px;
+        border-radius: 20px;
+        font-weight: 800;
+    }
+
+    &--line {
+        display: inline-block;
+        position: relative;
+        color: $white;
+        padding: 5px 10px;
+        font-weight: 600;
+        font-family: 18px;
+        text-decoration: none;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            height: 2px;
+            left: 0;
+            right: 0;
+            background-color: $white;
+        }
+    }
+}

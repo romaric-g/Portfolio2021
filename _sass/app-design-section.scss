@@ -1,0 +1,36 @@
+.AppDesignSection {
+
+    &__images {
+        &__image {
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__button {
+        text-align: center;
+        margin: 40px 0;
+    }
+
+    &__actions {
+        text-align: center;
+        
+        .Button {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+    
+            svg {
+                margin-left: 10px;
+            }
+        }
+    }
+
+
+}

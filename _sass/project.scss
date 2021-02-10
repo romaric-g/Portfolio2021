@@ -1,0 +1,42 @@
+.Project {
+    background-color: $light;
+    min-height: 100vh;
+
+    &__header {
+        text-align: center;
+
+        &__tags {
+            padding: 0;
+            margin: 10px 0;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+    
+            &__tag {
+                font-weight: 400;
+                font-size: 14px;
+                padding: 3px 15px;
+                border: 1px solid $red;
+                border-radius: 15px;
+                margin: 0 5px;
+            }
+        }
+    
+        &__title {
+            font-size: 72px;
+            font-weight: 600;
+            margin: 0;
+            color: $primary;
+        }
+    
+        &__period {
+            font-size: 18px;
+            font-weight: 400;
+        }
+    
+        &__description {
+            margin: 40px 0;
+        }
+    }
+}

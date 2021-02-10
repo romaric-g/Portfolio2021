@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="Projects Background--light">
+    <div class="container">
+        {% include menu.html color="light" %}
+        <div class="color-inner">
+            <section>
+                <h1 class="Title Title--n1">Mes projets</h1>
+                <div class="row">
+                    {% for project in site.projects %}
+                        <div class="col-md-4">
+                            {%- include project-preview.html -%}
+                        </div>
+                    {% endfor %}
+                
+                </div>
+            </section>
+            {% include app-design-section.html %}
+        </div>
+    </div>
+    {% include footer.html %}
+</div>

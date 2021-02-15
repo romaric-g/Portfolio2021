@@ -10,20 +10,44 @@ layout: default
             <section class="Project__header col-md-8">
                 <div class="Project__header__title">{{ page.title }}</div>
                 <div class="Project__header__period">{{ page.period }}</div>
-
                 <ul class="Project__header__tags">
-                    <li class="Project__header__tags__tag">Mobile</li>
-                    <li class="Project__header__tags__tag">Serveur</li>
-                    <li class="Project__header__tags__tag">UI</li>
+                    {% for tag in page.tags %}
+                        <li class="Project__header__tags__tag">{{ tag }}</li>
+                    {% endfor %}
                 </ul>
-
-                <p class="Project__description">
+                <p class="Project__header__description">
                     {{ page.description }}
                 </p>
+                {% if page.credits %}
+                    <p class="Project__header__credits"><span>Avec </span>
+                        {% assign num = page.credits.size | minus: 1 %}
+                        {% for i in (0..num) %}
+                            <a target="_blank" href="{{ page.credits-link[i] }}" class="Projects__credits__one">
+                                {{ page.credits[i] }}{% if i != num %}, {% endif %}
+                            </a>
+                        {% endfor %}
+                    </p>
+                {% endif %}
+                {% if page.site %}
+                    <a target="_blank" href="{{page.site}}" class="Button Button--line Button--dark">Tester</a>
+                {% endif %}
+                {% if page.github %}
+                    <a target="_blank" href="{{page.github}}" class="Button Button--line Button--dark">Github</a>
+                {% endif %}
             </section>
-            <div class="col-md-12">
-                {{ content }}
+            <div class="col-12 col-lg-10 Project__presentation Project__presentation--desktop">
+                {% for image in page.images-desktop %}
+                    <img src="{{ image }}" alt="">
+                {% endfor %}
             </div>
+            <div class="col-12 col-lg-10 Project__presentation Project__presentation--mobile">
+                {% for image in page.images-mobile %}
+                    <img src="{{ image }}" alt="">
+                {% endfor %}
+            </div>
+            <section class="col-12 col-lg-10 Project__content">
+                {{ page.content }}
+            </section>
         </div>
     </div>
     {% include footer.html %}

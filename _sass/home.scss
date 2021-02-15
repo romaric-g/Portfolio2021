@@ -1,6 +1,7 @@
 .Home {
     background-color: $primary;
     height: 100vh;
+    overflow: hidden;
 
     .container {
         color: $light;
@@ -26,45 +27,110 @@
                 padding: 0;
                 display: flex;
                 list-style: none;
+                transition: all 0.2s;
                 color: $light;
     
                 &__item {
                     position: relative;
                     margin-right: 20px;
                     min-width: 90px;
-    
+                    color: $light;
+                    cursor: pointer;
+
                     &::before {
                         content: '';
                         position: absolute;
                         top: -12px;
                         height: 1px;
                         width: 100%;
-                        transition-delay: all 0.2s;
+                        transition: all 0.2s;
                         background-color: $light;
                     }
     
-                    &--selected {
+                    &.active {
+                        color: $white;
     
                         &::before {
+                            top: -13px;
                             height: 3px;
                             background-color: $white;
                             color: $white;
                         }
                     }
     
+                    a {
+                        background-color: transparent;
+                        color: inherit;
+                        text-align: left;
+                        border: none;
+                        text-decoration: none;
+                    }
+
                     &__year {
                         font-weight: 600;
                         font-size: 18px;
+                        line-height: 18px;
                         margin: 0;
                     }
-    
+
                     &__month {
                         margin: 0;
                         font-weight: 400;
                         font-size: 12px;
                     }
+
+                    @include media-breakpoint-down(md) {
+                        flex: 1;
+                        flex-shrink: 1;
+                        min-width: unset;
+                        margin: 0 3px;
+
+                        &__year {
+                            display: none;
+                        }
+        
+                        &__month {
+                            display: none;
+                        }
+                    }
                 }
             }
         }
     }
+
+    .Cursor {
+        position: absolute;
+        pointer-events: none;
+        height: 0;
+        width: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__inner {
+            content: '';
+            display: block;
+            border-radius: 50%;
+            border: 0px solid #fff;
+            transition-duration: 0.2s;
+            flex-shrink: 0;
+            height: 0;
+            width: 0;
+        }
+
+        &.action .Cursor__inner {
+            height: 80px;
+            width: 80px;
+            border: 2px solid #fff;
+        }
+
+        &.hide .Cursor__inner {
+            height: 0;
+            width: 0;
+            border: 0px solid #fff;
+        }
+
+    }
+
+
 }

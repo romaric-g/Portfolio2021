@@ -1,0 +1,24 @@
+.Page404 {
+    background-color: $backgroundlight;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    &__inner {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__title.Title--n1 {
+            margin: 0;
+        }
+    }
+}

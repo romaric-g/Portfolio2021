@@ -7,7 +7,7 @@
 
         &__tags {
             padding: 0;
-            margin: 10px 0;
+            margin: 20px 0;
             list-style: none;
             display: flex;
             flex-direction: row;
@@ -17,14 +17,16 @@
                 font-weight: 400;
                 font-size: 14px;
                 padding: 3px 15px;
-                border: 1px solid $red;
+                border: 2px solid $red;
                 border-radius: 15px;
                 margin: 0 5px;
+                text-transform: capitalize;
             }
         }
     
         &__title {
             font-size: 72px;
+            line-height: 72px;
             font-weight: 600;
             margin: 0;
             color: $primary;
@@ -36,7 +38,52 @@
         }
     
         &__description {
-            margin: 40px 0;
+            margin: 20px 0;
+            text-align: left;
         }
+
+        &__credits {
+            text-align: left;
+            font-size: 18px;
+
+            span {
+                font-weight: 700;
+            }
+
+            a {
+                text-decoration: none;
+                
+            }
+        }
+
+        .Button {
+            margin: 20px 5px;
+        }
+    }
+
+
+    &__presentation {
+        margin-bottom: 80px;
+
+        img {
+            width: 100%;
+        }
+        &--desktop {
+            display: block;
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+        }
+
+        &--mobile {
+            display: none;
+            @include media-breakpoint-down(md) {
+                display: block;
+            }
+        }
+    }
+
+    &__content {
+        margin-bottom: 80px;
     }
 }

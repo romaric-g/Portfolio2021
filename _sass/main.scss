@@ -1,3 +1,4 @@
+@import "bootstrap-5.0.0-beta1/scss/bootstrap-reboot";
 @import "bootstrap-5.0.0-beta1/scss/bootstrap-grid";
 
 @import "variables";
@@ -8,7 +9,7 @@
 @import "about";
 @import "projects";
 @import "project";
-
+@import "page404";
 
 /* Includes */
 
@@ -16,6 +17,7 @@
 @import "footer";
 @import "project-preview";
 @import "app-design-section";
+@import "slide";
 
 
 /* Components */
@@ -28,6 +30,7 @@ body, html {
     padding: 0;
     margin: 0;
     font-family: 'Work Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 .Title {
@@ -45,7 +48,7 @@ body, html {
 
     &--n3 {
         font-weight: 400;
-        font-size: 18px;
+        font-size: 16px;
         margin: 0;
     }
 }
@@ -54,12 +57,35 @@ section {
     padding: 0 0 70px 0;
     
     p {
-        font-size: 24px;
+        font-size: 18px;
     }
 }
 
 .color-inner {
     padding: 60px 0;
+
+    @include media-breakpoint-down(lg) {
+        &:first-of-type {
+            padding-top: 0;
+        }
+    }
+}
+
+
+@include media-breakpoint-down(lg) {
+    .About {
+        &__me {
+            position: relative;
+            padding: 0;
+    
+            &__img {
+                position: relative;
+                top: 0;
+                left: 0;right: 0;bottom: 0;
+                width: 100%;
+            }
+        }
+    }
 }
 
 .Background {

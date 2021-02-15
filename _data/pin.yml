@@ -1,30 +1,48 @@
 1: 
   name: "Tactical 4"
+  description: "Un puissance 4 sur mobile et naviguateur multijoueur en ligne"
+  image: "/images/home-tactical.png"
   date:
     year: "2020"
     month: "décembre"
+  page: "tactical-4"
 2:
-  name: "Elena Koutoulidis"
+  name: "La pression Bordelaise"
+  description: "Création d'un blog sur le theme de la biere à Bordeaux. Développé from scratch en Php."
+  image: '/images/home-pression.png'
   date:
     year: "2020"
-    month: "décembre"
+    month: "avril"
+  page: "la-pression-bordelaise"
 3:
-  name: "La pression bordelaise"
+  name: "Porfolio 2020"
+  description: "Version 2020 de mon portfolio"
+  image: "/images/menu-pf2020.png"
   date:
     year: "2020"
-    month: "décembre"
+    month: "mars"
+  page: "portfolio-2020"
 4:
-  name: "Porfolio 2020"
+  name: "Elena Koutoulidis"
+  description: "Réalisation d'un site internet pour une psychothérapeute à Bordeaux"
+  image: "/images/home-elena.png"
   date:
-    year: "2019"
-    month: "décembre"
+    year: "2020"
+    month: "janvier"
+  page: "elena-koutoulidis"
 5:
-  name: "Porfolio 2020"
+  name: "Ecroc"
+  description: "Application web et distributeur physique créer pour automatiser et faciliter la gestion de la nourriture de son chien le tout à distance."
+  image: "/images/menu-ecroc.png"
   date:
     year: "2019"
-    month: "décembre"
+    month: "juin"
+  page: "ecroc"
 6:
-  name: "Porfolio 2020"
+  name: "Quiz App"
+  description: "Application mobile de quizz pour le voyage en espagne 2019 de mon lycée"
+  image: "/images/menu-quizzapp.png"
   date:
     year: "2019"
-    month: "décembre"
+    month: "mars"
+  page: "quiz-app"

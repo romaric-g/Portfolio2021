@@ -41,6 +41,15 @@ sass:
 collections:
   projects: 
     output: true
+    order:
+      - tactical-4.md
+      - l-evade.md
+      - la-pression-bordelaise.md
+      - portfolio-2020.md
+      - elena-koutoulidis.md
+      - ux-design.md
+      - quizz-app.md
+      - ecroc.md
 
 defaults:
   - scope:

@@ -1,70 +1,177 @@
 .Menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
+    padding: 20px 0;
+    z-index: 100;
 
-    &__title {
-        font-size: 24px;
-        font-weight: 800;
-    }
-
-    &__nav {
+    &__bar {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        list-style-type: none;
-        padding: 0;
+        margin-bottom: 20px;
 
-        &__item {
-            font-size: 18px;
-            font-weight: 600;
-            margin-left: 60px;
-            color: $light;
-
-            &--selected {
-                color: $white;
-            }
+        &__title {
+            font-size: 24px;
+            font-weight: 800;
+            color: $white;
+            margin: 0;
         }
-
-        .Button {
-            margin-left: 60px;
-        }
-    }
-
-    &--light {
-        .Menu__nav {
+    
+        &__nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+    
             &__item {
-                color: $grey;
+                font-size: 18px;
+                font-weight: 600;
+                margin-left: 60px;
+                color: $light;
     
                 &--selected {
-                    color: $primary;
+                    color: $white;
+                }
+    
+                &.active {
+                    font-size: $white;
                 }
             }
 
-            &__item.Button {
-                color: $primary;
-            }
-        }
-    }
-
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-}
-
-@include media-breakpoint-down(lg) {
-    .Menu {
-        &__nav {
-            &__item {
+            &__close {
                 display: none;
             }
 
             .Button {
-                margin: 0;
+                margin-left: 60px;
+            }
+        }
+
+        &__burger {
+            display: none;
+        }
+    
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    &--light {
+        .Menu__bar {
+            
+            &__title {
+                color: $primary;
+            }
+
+            &__nav {
+                &__item {
+                    color: $grey;
+        
+                    &--selected {
+                        color: $primary;
+                    }
+                }
+    
+                &__item.Button {
+                    color: $primary;
+                }
             }
         }
     }
 }
+
+@include media-breakpoint-down(lg) {
+
+    .Menu.animated .Menu__bar__nav {
+        transition-duration: 500ms;
+    }
+
+    .Menu {
+
+        &__bar {
+            transition: transform 0.2s;
+
+            &__burger {
+                display: block;
+                cursor: pointer;
+            }
+
+            &__nav {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 100vh;
+                z-index: 1000;
+                background-color: $primary;
+                display: flex;
+                flex-direction: column;
+                transform: translateX(-100%);
+
+                &__close {
+                    top: 40px;
+                    position: absolute;
+                    display: block;
+                    padding: 10px;
+                    border-radius: 50%;
+                    border: 2px solid $white;
+                    transform: translateY(-200px);
+                    transition: transform 0.2s 0.3s;
+                    cursor: pointer;
+
+                    svg path {
+                        fill: $white;
+                    }
+                }
+
+                &__item {
+                    font-size: 36px;
+                    color: $white!important;
+                    margin: 10px 0;
+                }
+                
+                .Button {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    margin: 0;
+                    left: 0;
+                    border-radius: 0;
+                    font-size: 22px;
+                    text-align: center;
+                }
+            }
+        }
+
+        &__bar__burger {
+            svg path {
+                fill: $white;
+            }
+        }
+
+        &--light {
+            .Menu__bar__burger {
+                svg path {
+                    fill: $primary;
+                }
+            }
+        }
+    }
+
+    .menu-active {
+        overflow-y: hidden;
+        max-height: 100vh;
+
+        .Menu__bar__nav {
+            transform: translateX(0);
+
+            &__close {
+                transform: translateY(0);
+            }
+
+        }
+    }
+}
+

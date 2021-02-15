@@ -1,0 +1,21 @@
+<div class="Slide">
+    <div class="Slide__content">
+        <p class="Slide__content__title">{{ include.pin.name }}</p>
+        <ul class="Slide__content__tags">
+            {% assign projects_path = '/projects/' | append: include.pin.page %}
+            {% assign project = site.projects | where:"id", projects_path  | first %}
+            {% for tag in project.tags %}
+                <li class="Slide__content__tags__tag">{{ tag }}</li>
+            {% endfor %}
+        </ul>
+        <p class="Slide__content__description">
+            {{ include.pin.description }}
+        </p>
+        <a href="/projects/{{pin.page}}" class="Button Button--line cursor--hide">Voir le projet</a>
+    </div>
+    <div class="Slide__imagecontainer cursor--action">
+        <a href="/projects/{{pin.page}}">
+            <img src="{{ include.pin.image }}" alt="" class="Slide__imagecontainer__img">
+        </a>
+    </div>
+</div>

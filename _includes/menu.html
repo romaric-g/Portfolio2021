@@ -1,9 +1,46 @@
-<nav class="Menu Menu--{{include.color}}">
-    <p class="Menu__title">Romaric Gauzi</p>
-    <ul class="Menu__nav">
-        <li class="Menu__nav__item"><a href="/">Home</a></li>
-        <li class="Menu__nav__item"><a href="/about.html">À propos</a></li>
-        <li class="Menu__nav__item"><a href="/projects.html">Mes projets</a></li>
-        <li class="Button Button--rounded"><a href="mailto:contact@romaricgauzi.com">Contactez-moi</a></li>
-    </ul>
+<nav class="Menu Menu--{{include.color}}" id="menu">
+    <div class="Menu__bar">
+        <p class="Menu__bar__title"><a href="/">Romaric Gauzi</a></p>
+        <ul class="Menu__bar__nav">
+            <div class="Menu__bar__nav__close" id="close-menu">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.4109 18.0002L27.701 9.71019C27.8648 9.51888 27.9504 9.27281 27.9407 9.02113C27.9309 8.76946 27.8266 8.53072 27.6485 8.35262C27.4704 8.17453 27.2317 8.0702 26.98 8.06047C26.7283 8.05075 26.4823 8.13636 26.291 8.30019L18.0009 16.5902L9.71095 8.29019C9.52265 8.10188 9.26725 7.99609 9.00095 7.99609C8.73465 7.99609 8.47925 8.10188 8.29095 8.29019C8.10265 8.47849 7.99686 8.73388 7.99686 9.00019C7.99686 9.26649 8.10265 9.52188 8.29095 9.71019L16.591 18.0002L8.29095 26.2902C8.18627 26.3798 8.10125 26.4902 8.04122 26.6142C7.9812 26.7383 7.94747 26.8734 7.94215 27.0111C7.93683 27.1489 7.96004 27.2862 8.01031 27.4145C8.06059 27.5428 8.13684 27.6594 8.2343 27.7568C8.33175 27.8543 8.4483 27.9305 8.57663 27.9808C8.70495 28.0311 8.84228 28.0543 8.98 28.049C9.11772 28.0437 9.25285 28.0099 9.37692 27.9499C9.50098 27.8899 9.6113 27.8049 9.70095 27.7002L18.0009 19.4102L26.291 27.7002C26.4823 27.864 26.7283 27.9496 26.98 27.9399C27.2317 27.9302 27.4704 27.8258 27.6485 27.6477C27.8266 27.4697 27.9309 27.2309 27.9407 26.9792C27.9504 26.7276 27.8648 26.4815 27.701 26.2902L19.4109 18.0002Z" fill="black"/>
+                </svg>
+            </div>
+            <li class="Menu__bar__nav__item"><a href="/">Home</a></li>
+            <li class="Menu__bar__nav__item"><a href="/about.html">À propos</a></li>
+            <li class="Menu__bar__nav__item"><a href="/projects.html">Mes projets</a></li>
+            <li class="Button Button--rounded"><a href="mailto:contact@romaricgauzi.com">Contactez-moi</a></li>
+        </ul>
+        <div class="Menu__bar__burger" id="open-menu">
+            <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1.20935C0 0.888611 0.152371 0.581008 0.423592 0.354211C0.694814 0.127414 1.06267 0 1.44623 0H21.6935C22.0771 0 22.4449 0.127414 22.7162 0.354211C22.9874 0.581008 23.1397 0.888611 23.1397 1.20935C23.1397 1.53009 22.9874 1.83769 22.7162 2.06449C22.4449 2.29129 22.0771 2.4187 21.6935 2.4187H1.44623C1.06267 2.4187 0.694814 2.29129 0.423592 2.06449C0.152371 1.83769 0 1.53009 0 1.20935Z" fill="#080327"/>
+                <path d="M0 15.7211C0 15.4003 0.152371 15.0927 0.423592 14.8659C0.694814 14.6391 1.06267 14.5117 1.44623 14.5117H21.6935C22.0771 14.5117 22.4449 14.6391 22.7162 14.8659C22.9874 15.0927 23.1397 15.4003 23.1397 15.7211C23.1397 16.0418 22.9874 16.3494 22.7162 16.5762C22.4449 16.803 22.0771 16.9304 21.6935 16.9304H1.44623C1.06267 16.9304 0.694814 16.803 0.423592 16.5762C0.152371 16.3494 0 16.0418 0 15.7211Z" fill="#080327"/>
+                <path d="M10.122 7.25586C9.73845 7.25586 9.3706 7.38327 9.09937 7.61007C8.82815 7.83687 8.67578 8.14447 8.67578 8.46521C8.67578 8.78595 8.82815 9.09356 9.09937 9.32035C9.3706 9.54715 9.73845 9.67457 10.122 9.67457H21.6919C22.0755 9.67457 22.4433 9.54715 22.7145 9.32035C22.9858 9.09356 23.1381 8.78595 23.1381 8.46521C23.1381 8.14447 22.9858 7.83687 22.7145 7.61007C22.4433 7.38327 22.0755 7.25586 21.6919 7.25586H10.122Z" fill="#080327"/>
+            </svg>
+        </div>
+    </div>
+    <script>
+        const root = document.getElementById('root');
+        const menu = document.getElementById('menu');
+        const open = document.getElementById('open-menu');
+        const close = document.getElementById('close-menu');
+
+        let isOpen = false;
+        
+        open.onclick = () => {
+            root.classList.add('menu-active')
+        }
+
+        close.onclick = () => {
+            root.classList.remove('menu-active')
+        }
+
+        document.body.onload = () => {
+            setTimeout(() => {
+                menu.classList.add('animated')
+            }, 500)
+        }
+        
+    </script>
 </nav>

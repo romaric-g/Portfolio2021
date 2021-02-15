@@ -5,34 +5,27 @@ layout: default
 <div class="Home">
     <div class="container">
         {% include menu.html color="dark" %}
-        <div class="Slider">
-            <div class="Slider__content">
-                <p class="Slider__content__title">Tactical 4</p>
-                <ul class="Slider__content__tags">
-                    <li class="Slider__content__tags__tag">Mobile</li>
-                    <li class="Slider__content__tags__tag">Serveur</li>
-                    <li class="Slider__content__tags__tag">UI</li>
-                </ul>
-                <p class="Slider__content__description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut volutpat magna. Fusce vel lacinia turpis.
-                </p>
-                <a href="" class="Button Button--line">Voir le projet</a>
-            </div>
-            <div class="Slider__imagecontainer">
-                <img src="/images/home-tactical.png" alt="" class="slider__imagecontainer__img">
-            </div>
+        <div class="Slider" id="slider">
+            {% for pin_hash in site.data.pin %}
+            {% assign pin = pin_hash[1] %}
+                {%- include slide.html pin=pin -%}
+            {% endfor %}
         </div>
         <div class="Home__footer">
-            <ul class="Home__footer__sliderinfo">
+            <ul class="Home__footer__sliderinfo" id="slider-nav">
                 {% for pin_hash in site.data.pin %}
                     {% assign pin = pin_hash[1] %}
-                    <li class="Home__footer__sliderinfo__item Home__footer__sliderinfo__item--selected">
-                        <p class="Home__footer__sliderinfo__item__year">{{ pin.date.year }}</p>
-                        <p class="Home__footer__sliderinfo__item__month">{{ pin.date.month }}</p>
+                    <li class="Home__footer__sliderinfo__item">
+                        <a href="#">
+                            <p class="Home__footer__sliderinfo__item__year">{{ pin.date.year }}</p>
+                            <p class="Home__footer__sliderinfo__item__month">{{ pin.date.month }}</p>
+                        </a>
                     </li>
                 {% endfor %}
             </ul>
-
         </div>
     </div>
+    <div class="Cursor" id="cursor"><span class="Cursor__inner"></span></div>
+    <script src="{{ "/assets/js/slide.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/cursor.js" | relative_url }}"></script>
 </div>

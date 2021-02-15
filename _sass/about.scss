@@ -7,9 +7,13 @@
 
         &__img {
             position: absolute;
-            top: -30px;
+            top: 0;
             right: 0;
             width: 120%;
+
+            @media (min-width: 992px) {
+                top: -80px;
+            }
         }
     }
 
@@ -25,7 +29,7 @@
             ul {
                 padding-left: 25px;
                 li {
-                    font-size: 24px;
+                    font-size: 18px;
                 }
             }
         }

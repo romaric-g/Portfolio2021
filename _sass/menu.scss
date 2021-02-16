@@ -82,7 +82,7 @@
     }
 }
 
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down(md) {
 
     .Menu.animated .Menu__bar__nav {
         transition-duration: 500ms;

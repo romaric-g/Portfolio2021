@@ -64,7 +64,7 @@ section {
     padding: 60px 0;
 
     @include media-breakpoint-down(lg) {
-        &:first-of-type {
+        &--first {
             padding-top: 0;
         }
     }

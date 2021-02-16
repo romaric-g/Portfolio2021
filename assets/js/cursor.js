@@ -96,16 +96,16 @@ function handleTouchMove(evt) {
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
             /* left swipe */ 
+            scrollNextProject()
         } else {
             /* right swipe */
+            scrollPrevProject()
         }                       
     } else {
         if ( yDiff > 0 ) {
             /* up swipe */
-            scrollPrevProject()
         } else { 
             /* down swipe */
-            scrollNextProject()
         }                                                                 
     }
     /* reset values */

@@ -84,10 +84,6 @@
 
 @include media-breakpoint-down(md) {
 
-    .Menu.animated .Menu__bar__nav {
-        transition-duration: 500ms;
-    }
-
     .Menu {
 
         &__bar {
@@ -101,14 +97,16 @@
             &__nav {
                 position: absolute;
                 top: 0;
-                left: 0;
-                right: 0;
+                right: 100vw;
+                width: 100vw;
                 height: 100vh;
                 z-index: 1000;
                 background-color: $primary;
                 display: flex;
                 flex-direction: column;
-                transform: translateX(-100%);
+                transition-duration: 500ms;
+                transform: translateX(0);
+                transition-property: transform;
 
                 &__close {
                     top: 40px;
@@ -165,7 +163,7 @@
         max-height: 100vh;
 
         .Menu__bar__nav {
-            transform: translateX(0);
+            transform: translateX(100%);
 
             &__close {
                 transform: translateY(0);

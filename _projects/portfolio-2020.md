@@ -12,7 +12,7 @@ images-mobile: [
     '/images/pf2020/mobile/pf2020-2.png',
 ]
 period: Mars 2020
-site: "https://romaricgauzi.com"
+site: "https://v2020.romaricgauzi.com/"
 github: "https://github.com/romaric-g/romaricgauzi.com"
 tags: ["web","UI"]
 ---

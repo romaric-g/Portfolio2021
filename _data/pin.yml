@@ -1,6 +1,6 @@
 1: 
   name: "Tactical 4"
-  description: "Un puissance 4 sur mobile et naviguateur multijoueur en ligne"
+  description: "Un puissance 4 sur mobile et navigateur en ligne"
   image: "/images/home-tactical.png"
   date:
     year: "2020"
@@ -8,7 +8,7 @@
   page: "tactical-4"
 2:
   name: "La pression Bordelaise"
-  description: "Création d'un blog sur le theme de la biere à Bordeaux. Développé from scratch en Php."
+  description: "Création d'un blog sur le thème de la bière à Bordeaux. Développé from scratch en PHP."
   image: '/images/home-pression.png'
   date:
     year: "2020"
@@ -40,7 +40,7 @@
   page: "ecroc"
 6:
   name: "Quiz App"
-  description: "Application mobile de quizz pour le voyage en espagne 2019 de mon lycée"
+  description: "Application mobile de quiz pour le voyage en espagne 2019 de mon lycée"
   image: "/images/menu-quizzapp.png"
   date:
     year: "2019"

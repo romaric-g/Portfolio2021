@@ -1,7 +1,7 @@
 ---
 title: L'évadé
 type: Expérience interactive
-preview: /images/preview-evade.png
+preview: /images/preview-min/preview-evade.jpg
 description: "L'Évadé est un projet réalisé en collaboration avec le Musée des Beaux-Arts de Bordeaux dans le cadre d'une exposition d'histoires interactives mêlant l'art & le rêve.
 Vous incarnez un personnage se réveillant dans la plus grande incompréhension devant un tableau déchiré. Une représentation d'un crime dont le coupable s'est échappé. Vous vous mettez en quête d'interroger les personnages des tableaux voisins dans le but de découvrir une seule et unique chose : la vérité. Saurez-vous découvrir ce qu'il s'est passé ? L'identité du tueur ? Ou encore mieux, où se trouve t-il ?"
 images-desktop: [

@@ -1,8 +1,8 @@
 ---
 title: Quiz app
 type: Application mobile
-preview: /images/preview-quizzapp.png
-description: Cette application Android permet de découvrir la ville de Barcelone. Seul ou en équipe, suivez un parcours définis afin de vous rendre aux différents lieux mythique de la ville. Chaque lieu sur la carte sont accompagnés d’une question sous forme de QCM. Répondez à chaque questions dans un temps impartie pour obtenir le meilleur score!
+preview: /images/preview-min/preview-quizzapp.jpg
+description: Cette application Android permet de découvrir la ville de Barcelone. Seul ou en équipe, suivez un parcours définie afin de vous rendre aux différents lieux mythiques de la ville. Chaque lieu sur la carte sont accompagnés d'une question sous forme de QCM. Répondez à chaque question dans un temps imparti pour obtenir le meilleur score!
 images-desktop: [
     '/images/preview-quizzapp.png'
 ]

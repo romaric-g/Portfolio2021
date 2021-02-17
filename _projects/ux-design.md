@@ -1,8 +1,8 @@
 ---
 title: Methodes et outils de l'UX design
 type: Site web
-preview: /images/preview-uxdesign.png
-description: Avec une équipe de 6 personnes, nous avons été chargé de créer un site sur le thèmes des outils et des méthodes de l’UX design. L’Objectif de ce site était tout d’abord de nous initier à l'expérience utilisateur ainsi qu'à la conception d’interface utilisateur. Il a été aussi de créer un site respectant les règles d’accessibilité. Pendant une durée de 2 semaines, nous avons pu utilisé de nombreuse méthodes et outils pour effectuer la recherche utilisateur et aboutir à un site qui réponde aux besoins de nos cibles.
+preview: /images/preview-min/preview-uxdesign.jpg
+description: Avec une équipe de 6 personnes, nous avons été chargés de créer un site sur le thème des outils et des méthodes de l'UX design. L'Objectif de ce site était tout d'abord de nous initier à l'expérience utilisateur ainsi qu'à la conception d'interface utilisateur. Il a été aussi de créer un site respectant les règles d'accessibilité. Pendant une durée de deux semaines, nous avons pu utiliser de nombreuse méthodes et outils pour effectuer la recherche utilisateur et aboutir à un site qui réponde aux besoins de nos cibles.
 images-desktop: [
     '/images/uxdesign/uxdesign-1.png',
     '/images/uxdesign/uxdesign-2.png',

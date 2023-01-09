@@ -18,7 +18,7 @@ images-mobile: [
 credits: ["Antoine Tardivel"]
 credits-link: ["https://antoinetardivel.poeticwave.fr/projets/tactical4"]
 period: Décembre 2020
-site: "https://tactical4.fr"
+site: "https://tactical4.netlify.app/"
 github: "https://github.com/romaric-g/Tactical4"
 tags: ["mobile","server","UI"]
 ---
